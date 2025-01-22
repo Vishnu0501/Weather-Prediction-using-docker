@@ -1,0 +1,11 @@
+FROM python:3.11.10
+
+WORKDIR /example1
+
+COPY . /example1/
+
+ADD main.py .
+
+RUN pip install --no-cache-dir requests
+
+CMD ["python", "./main.py"]
